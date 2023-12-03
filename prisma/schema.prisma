@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Post {
+  id              String @id @default(cuid())
+  videoUrl        String
+  description     String
+  tag             String
+  views           Decimal
+  like            Like[]
+}
+
+model User {
+  id            String    @id @default(cuid())
+  username      String    @unique
+  email         String?   @unique
+  image         String?   @default("/user.jpg")
+  bio           String?
+  password      String
+  createdAt     DateTime  @default(now())
+  updateAt      DateTime @updatedAt
+  like          Like[]
+}
+
+model Like {
+  id            String    @id @default(cuid())
+  user          User @relation(fields: [userid], references: [id])
+  userid        String
+  post          Post @relation(fields: [vid], references: [id])
+  vid           String
+}
