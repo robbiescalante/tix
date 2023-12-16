@@ -8,14 +8,18 @@ import { PostLikedCompTypes } from "@/app/types"
 export default function PostLiked({post, id}: PostLikedCompTypes) {
 
     useEffect(() => {
-        const video = document.getElementById(`video${post?.id}`) as HTMLVideoElement
+        const video = document.getElementById(`video${post?.id}`) as HTMLVideoElement;
 
-        setTimeout(() => {
-            video.addEventListener('mouseenter', () => { video.play() })
-            video.addEventListener('mouseleave', () => { video.pause() })
-        }, 50)
+        const playVideoOnInteraction = () => {
+            video.play();
+        };
 
-    }, [])
+        video.addEventListener('touchstart', playVideoOnInteraction);
+
+        return () => {
+            video.removeEventListener('touchstart', playVideoOnInteraction);
+        };
+    }, []);
 
     return (
         <>
