@@ -64,6 +64,7 @@ export default function PostMain({ post }: PostMainCompTypes) {
                     <video
                         id={`video-${post.id}`}
                         loop
+                        playsInline
                         muted={isMuted}
                         className="object-cover"
                         style={{ width: '100%' }}
