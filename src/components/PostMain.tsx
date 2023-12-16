@@ -58,7 +58,7 @@ export default function PostMain({ post }: PostMainCompTypes) {
         <>
             <div
                 id={`PostMain-${post.id}`}
-                className="flex justify-center border-b h-[100vh] sm:h-[calc(100vh-3.5rem)] relative"
+                className="flex justify-center border-b h-[100dvh] sm:h-[calc(100dvh-3.5rem)] relative"
             >
                 <div className="flex">
                     <video

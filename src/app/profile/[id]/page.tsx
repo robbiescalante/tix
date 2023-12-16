@@ -84,7 +84,7 @@ const Profile = ({ params }: { params: { id: string } }) => {
           <EditProfileOverlay onClose={handleCloseOverlay} id={profile.id} />
         )}
 
-        <div className="ml-8 pt-[100px] pl-[15px] w-[calc(100%-90px)] max-w-[1800px] h-[100vh] ">
+        <div className="ml-8 pt-[100px] pl-[15px] w-[calc(100%-90px)] max-w-[1800px] h-[100dvh]">
           <div className="flex items-center justify-center">
             <div className="w-full flex flex-col items-center">
               <div className='mt-7'>
