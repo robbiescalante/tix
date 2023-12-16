@@ -60,8 +60,8 @@ export default function Login() {
 
     return (
         <>
-            <div>
-                <h1 className="text-center text-[28px] mb-12 font-bold text-black">Log in</h1>
+            <div className="text-[13px] md:text-[15px]">
+                <h1 className="text-center text-[24px] md:text-[28px] mb-4 md:mb-12 font-bold text-black">Log in</h1>
 
                 <form onSubmit={
                     handleSubmit(login)
@@ -84,7 +84,7 @@ export default function Login() {
                         <p className="text-red-500 mb-4">{errorText}</p>
                     )}
 
-                    <div className="px-6 pb-2 mt-14">
+                    <div className="px-6 pb-2 mt-6 md:mt-14">
                         <button
                             disabled={loading}
                             type="submit"

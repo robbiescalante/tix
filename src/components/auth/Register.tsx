@@ -82,8 +82,8 @@ export default function Register() {
 
 
     return (
-        <div>
-            <h1 className="text-center text-[28px] mb-12 font-bold text-black">Register</h1>
+        <div className="text-[13px] md:text-[15px]">
+            <h1 className="text-center text-[24px] md:text-[28px] mb-4 md:mb-12 font-bold text-black">Register</h1>
 
             <form onSubmit={handleSubmit(registerUser)} className="px-6 pb-2">
                 <TextInput
@@ -114,11 +114,11 @@ export default function Register() {
                     error={showError('confirmPassword')}
                 />
 
-                <div className="px-6 pb-2 mt-14">
+                <div className="px-6 pb-2 mt-6 md:mt-14">
                     <button
                         disabled={loading}
                         type="submit"
-                        className={`flex items-center justify-center w-full text-[17px] font-semibold text-white py-3 rounded-sm bg-[black]
+                        className={`flex items-center justify-center w-full text-[15px] font-semibold text-white py-3 rounded-sm bg-[black]
                         `}
                     >
                         {loading ? <BiLoaderCircle className="animate-spin" color="#ffffff" size={25} /> : 'Register'}
