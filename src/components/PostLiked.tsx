@@ -30,6 +30,7 @@ export default function PostLiked({post, id}: PostLikedCompTypes) {
                             id={`video${post.id}`}
                             muted
                             loop
+                            playsInline
                             className="aspect-[3/4] object-cover rounded-md"
                             src={(post.videoUrl)}
                         />
