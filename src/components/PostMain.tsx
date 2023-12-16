@@ -3,7 +3,6 @@
 import { PostMainCompTypes } from "@/app/types";
 import { useEffect, useState } from "react";
 import PostMainLikes from "./PostMainLikes";
-import ReportFormOverlay from "./ReportOverlay";
 
 export default function PostMain({ post }: PostMainCompTypes) {
     const [isMuted, setIsMuted] = useState(true);
@@ -53,14 +52,6 @@ export default function PostMain({ post }: PostMainCompTypes) {
         const video = document.getElementById(`video-${post?.id}`) as HTMLVideoElement;
         video.muted = !video.muted;
         setIsMuted(video.muted);
-    };
-
-    const openReportOverlay = () => {
-        setIsReportOverlayVisible(true);
-    };
-
-    const closeReportOverlay = () => {
-        setIsReportOverlayVisible(false);
     };
 
     return (

@@ -38,7 +38,7 @@ const Homepage = () => {
 
   return (
       <div className="half-image sm:overflow-hidden" >
-          <img className="h-[100vh] mt-14" src="/woman3.jpg" />
+          <img className="h-[100dvh] mt-14" src="/woman3.jpg" />
           <div className=''>
               <img className="image2 top-[40%] left-[5%] w-[70%] sm:w-[44%] lg:w-[35%] sm:top-[10%] sm:left-[5%]" src="/tixxxw.png" />
           </div>
